@@ -1,0 +1,19 @@
+### YamlMime:TableOfContent
+- uid: XPike.Extensions.DependencyInjection
+  name: XPike.Extensions.DependencyInjection
+  items:
+  - uid: XPike.Extensions.DependencyInjection.IServiceCollectionExtensions
+    name: IServiceCollectionExtensions
+  - uid: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+    name: IServiceProviderExtensions
+  - uid: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+    name: ServiceProviderVerificationException
+  - uid: XPike.Extensions.DependencyInjection.VerificationResult
+    name: VerificationResult
+- uid: XPike.Extensions.DependencyInjection.WebApi
+  name: XPike.Extensions.DependencyInjection.WebApi
+  items:
+  - uid: XPike.Extensions.DependencyInjection.WebApi.IServiceCollectionExtensions
+    name: IServiceCollectionExtensions
+  - uid: XPike.Extensions.DependencyInjection.WebApi.MicrosoftDependencyResolver
+    name: MicrosoftDependencyResolver

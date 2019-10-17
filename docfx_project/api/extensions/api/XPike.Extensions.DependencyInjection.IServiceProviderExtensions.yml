@@ -1,0 +1,420 @@
+### YamlMime:ManagedReference
+items:
+- uid: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  commentId: T:XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  id: IServiceProviderExtensions
+  parent: XPike.Extensions.DependencyInjection
+  children:
+  - XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify(System.IServiceProvider)
+  langs:
+  - csharp
+  - vb
+  name: IServiceProviderExtensions
+  nameWithType: IServiceProviderExtensions
+  fullName: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  type: Class
+  source:
+    remote:
+      path: src/XPike.Extensions.DependencyInjection/IServiceProviderExtensions.cs
+      branch: master
+      repo: https://xpike@dev.azure.com/xpike/xpike/_git/xpike-extensions
+    id: IServiceProviderExtensions
+    path: ../src/XPike.Extensions.DependencyInjection/IServiceProviderExtensions.cs
+    startLine: 12
+  assemblies:
+  - XPike.Extensions.DependencyInjection
+  namespace: XPike.Extensions.DependencyInjection
+  summary: "\nExtension methods for IServiceProvider, to enhance the features and functionality of \nMicrosoft.Extensions.DependencyInjection.\n"
+  example: []
+  syntax:
+    content: public static class IServiceProviderExtensions
+    content.vb: Public Module IServiceProviderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify(System.IServiceProvider)
+  commentId: M:XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify(System.IServiceProvider)
+  id: Verify(System.IServiceProvider)
+  isExtensionMethod: true
+  parent: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: Verify(IServiceProvider)
+  nameWithType: IServiceProviderExtensions.Verify(IServiceProvider)
+  fullName: XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify(System.IServiceProvider)
+  type: Method
+  source:
+    remote:
+      path: src/XPike.Extensions.DependencyInjection/IServiceProviderExtensions.cs
+      branch: master
+      repo: https://xpike@dev.azure.com/xpike/xpike/_git/xpike-extensions
+    id: Verify
+    path: ../src/XPike.Extensions.DependencyInjection/IServiceProviderExtensions.cs
+    startLine: 44
+  assemblies:
+  - XPike.Extensions.DependencyInjection
+  namespace: XPike.Extensions.DependencyInjection
+  summary: "\nVerifies the dependency graph for completeness and valid dependency lifetimes.\nThis method is thread-safe.\n"
+  remarks: "\nThis method also ensures that singletons only depend on other singletons and that scoped objects only\ndepend on singletons and other scoped objects. Having a singleton depend on a transient object\neffectively makes that transient object a singleton and could result in undesired behavior.\n"
+  example:
+  - "\n<pre><code>public void Configure(IApplicationBuilder app, IHostingEnvironment env)\n{\n    app.ApplicationServices.Verify();\n    ...\n    app.UseMvc();\n}</code></pre>\n"
+  syntax:
+    content: public static void Verify(this IServiceProvider provider)
+    parameters:
+    - id: provider
+      type: System.IServiceProvider
+      description: This IServiceProvider instance.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub Verify(provider As IServiceProvider)
+  overload: XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The container has already been verified.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: "\nIServiceCollection must be registerd in order to verify the provider. \n<code>Verify()</code> needs to obtain the list of registered services from the IServiceCollection instance.\n"
+  - type: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+    commentId: T:XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+    description: The container is invalid.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: XPike.Extensions.DependencyInjection
+  commentId: N:XPike.Extensions.DependencyInjection
+  name: XPike.Extensions.DependencyInjection
+  nameWithType: XPike.Extensions.DependencyInjection
+  fullName: XPike.Extensions.DependencyInjection
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+  commentId: T:XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+  name: ServiceProviderVerificationException
+  nameWithType: ServiceProviderVerificationException
+  fullName: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+- uid: XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify*
+  commentId: Overload:XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify
+  name: Verify
+  nameWithType: IServiceProviderExtensions.Verify
+  fullName: XPike.Extensions.DependencyInjection.IServiceProviderExtensions.Verify
+- uid: System.IServiceProvider
+  commentId: T:System.IServiceProvider
+  parent: System
+  isExternal: true
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: System.IServiceProvider

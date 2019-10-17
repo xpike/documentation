@@ -1,0 +1,12 @@
+- name: Home
+  href: /
+- name: Articles
+  href: articles/
+- name: Api Documentation
+  href: api/
+  homepage: api/index.md
+- name: GitHub
+  href: https://github.com/xpike
+- name: Nuget
+  href: https://nuget.org
+  

@@ -1,0 +1,23 @@
+/* .directory {
+    font-size: 16pt;
+}
+.navbar-inverse {
+    background-color: #36b987
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 24pt;
+}
+
+.navbar-brand>img {
+    display: inline-block;
+}
+.navbar-brand>span {
+    display: inline-block;
+    vertical-align: middle;
+} */
+
+#logo {
+    height: 50px;
+}

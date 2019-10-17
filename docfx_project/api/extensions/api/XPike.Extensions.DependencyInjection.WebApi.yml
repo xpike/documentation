@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: XPike.Extensions.DependencyInjection.WebApi
+  commentId: N:XPike.Extensions.DependencyInjection.WebApi
+  id: XPike.Extensions.DependencyInjection.WebApi
+  children:
+  - XPike.Extensions.DependencyInjection.WebApi.IServiceCollectionExtensions
+  - XPike.Extensions.DependencyInjection.WebApi.MicrosoftDependencyResolver
+  langs:
+  - csharp
+  - vb
+  name: XPike.Extensions.DependencyInjection.WebApi
+  nameWithType: XPike.Extensions.DependencyInjection.WebApi
+  fullName: XPike.Extensions.DependencyInjection.WebApi
+  type: Namespace
+  assemblies:
+  - XPike.Extensions.DependencyInjection.WebApi
+references:
+- uid: XPike.Extensions.DependencyInjection.WebApi.IServiceCollectionExtensions
+  commentId: T:XPike.Extensions.DependencyInjection.WebApi.IServiceCollectionExtensions
+  name: IServiceCollectionExtensions
+  nameWithType: IServiceCollectionExtensions
+  fullName: XPike.Extensions.DependencyInjection.WebApi.IServiceCollectionExtensions
+- uid: XPike.Extensions.DependencyInjection.WebApi.MicrosoftDependencyResolver
+  commentId: T:XPike.Extensions.DependencyInjection.WebApi.MicrosoftDependencyResolver
+  name: MicrosoftDependencyResolver
+  nameWithType: MicrosoftDependencyResolver
+  fullName: XPike.Extensions.DependencyInjection.WebApi.MicrosoftDependencyResolver

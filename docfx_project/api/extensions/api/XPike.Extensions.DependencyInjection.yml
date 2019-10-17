@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: XPike.Extensions.DependencyInjection
+  commentId: N:XPike.Extensions.DependencyInjection
+  id: XPike.Extensions.DependencyInjection
+  children:
+  - XPike.Extensions.DependencyInjection.IServiceCollectionExtensions
+  - XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  - XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+  - XPike.Extensions.DependencyInjection.VerificationResult
+  langs:
+  - csharp
+  - vb
+  name: XPike.Extensions.DependencyInjection
+  nameWithType: XPike.Extensions.DependencyInjection
+  fullName: XPike.Extensions.DependencyInjection
+  type: Namespace
+  assemblies:
+  - XPike.Extensions.DependencyInjection
+references:
+- uid: XPike.Extensions.DependencyInjection.IServiceCollectionExtensions
+  commentId: T:XPike.Extensions.DependencyInjection.IServiceCollectionExtensions
+  name: IServiceCollectionExtensions
+  nameWithType: IServiceCollectionExtensions
+  fullName: XPike.Extensions.DependencyInjection.IServiceCollectionExtensions
+- uid: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  commentId: T:XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+  name: IServiceProviderExtensions
+  nameWithType: IServiceProviderExtensions
+  fullName: XPike.Extensions.DependencyInjection.IServiceProviderExtensions
+- uid: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+  commentId: T:XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+  name: ServiceProviderVerificationException
+  nameWithType: ServiceProviderVerificationException
+  fullName: XPike.Extensions.DependencyInjection.ServiceProviderVerificationException
+- uid: XPike.Extensions.DependencyInjection.VerificationResult
+  commentId: T:XPike.Extensions.DependencyInjection.VerificationResult
+  name: VerificationResult
+  nameWithType: VerificationResult
+  fullName: XPike.Extensions.DependencyInjection.VerificationResult
