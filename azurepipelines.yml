@@ -49,11 +49,6 @@ jobs:
         inputs:
           solution: '$(System.DefaultWorkingDirectory)/docfx_project/docfx.json'
 
-      - task: PublishPipelineArtifact@1
-        inputs:
-          artifact: site
-          targetPath: $(System.DefaultWorkingDirectory)/docfx_project/_site
-
       - task: CopyFiles@2
         displayName: Copy docs
         inputs:
@@ -64,6 +59,7 @@ jobs:
           OverWrite: true
 
       - script: |
+          git add *
           git commit -a -m "Updated docs version $(Build.BuildNumber)"
           git push
         workingDirectory: $(Agent.TempDirectory)/xpike.github.io/
