@@ -25,3 +25,10 @@ General developer guides are found under:
 ```
 docfx_project/articles
 ```
+
+## Building
+
+The build for the documentation is against the xpike.github.io repository. It pulls together all the api docs and
+conceptual docs to generate the complete site.
+
+If a module and api documentation is added, that build needs to be modifed accordingly.
