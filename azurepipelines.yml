@@ -11,13 +11,19 @@ jobs:
           git config --global user.email "build@xpike.org"
           git config --global user.name "Build Agent"
           git clone https://github.com/xpike/microsoft-extensions.git
+          git clone https://github.com/xpike/ioc.git
           dir 
         workingDirectory: $(System.DefaultWorkingDirectory) 
-
 
       - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
         displayName: 'Create DocFx Documentation'
         inputs:
-          solution: '$(System.DefaultWorkingDirectory)/_xpike_microsoft-extensions/docs/docfx.json'
+          solution: '$(System.DefaultWorkingDirectory)/microsoft-extensions/docs/docfx.json'
 
-      
+      - task: CopyFiles@2
+        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)/microsoft-extensions/docs/api
+          Contents: |
+            **
+          TargetFolder: $(System.DefaultWorkingDirectory)/docfx_project/api/extensions/api
+          OverWrite: true
