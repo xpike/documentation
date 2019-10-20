@@ -1,2 +1,7 @@
 - name: Introduction
   href: intro.md
+- name: Verifying the Container
+  href: verifying-the-container.md
+- name: Using MSDI in WebAPI
+  href: using-msid-in-webapi.md
+  

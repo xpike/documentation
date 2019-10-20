@@ -11,9 +11,7 @@
       },
       {
         "files": [
-          "api/index.md",
-          "api/extensions/**",
-          "api/ioc/**"
+          "api/**"
         ]
       }
     ],
