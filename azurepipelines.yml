@@ -10,20 +10,21 @@ jobs:
       - script: |
           git config --global user.email "build@xpike.org"
           git config --global user.name "Build Agent"
+          git clone https://github.com/xpike/xpike.github.io.git
           git clone https://github.com/xpike/microsoft-extensions.git
           git clone https://github.com/xpike/ioc.git
           dir 
-        workingDirectory: $(System.DefaultWorkingDirectory) 
+        workingDirectory: $(Agent.TempDirectory) 
 
       - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
         displayName: 'Create Extensions Documentation'
         inputs:
-          solution: '$(System.DefaultWorkingDirectory)/microsoft-extensions/docs/docfx.json'
+          solution: '$(Agent.TempDirectory)/microsoft-extensions/docs/docfx.json'
 
       - task: CopyFiles@2
         displayName: Copy extensions api
         inputs:
-          SourceFolder: $(System.DefaultWorkingDirectory)/microsoft-extensions/docs/api
+          SourceFolder: $(Agent.TempDirectory)/microsoft-extensions/docs/api
           Contents: |
             **
           TargetFolder: $(System.DefaultWorkingDirectory)/docfx_project/api/extensions/api
@@ -32,20 +33,38 @@ jobs:
       - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
         displayName: 'Create IoC Documentation'
         inputs:
-          solution: '$(System.DefaultWorkingDirectory)/microsoft-extensions/docs/docfx.json'
+          solution: '$(Agent.TempDirectory)/microsoft-extensions/docs/docfx.json'
 
       - task: CopyFiles@2
         displayName: Copy IoC api
         inputs:
-          SourceFolder: $(System.DefaultWorkingDirectory)/ioc/docs/api
+          SourceFolder: $(Agent.TempDirectory)/ioc/docs/api
           Contents: |
             **
           TargetFolder: $(System.DefaultWorkingDirectory)/docfx_project/api/ioc/api
           OverWrite: true
+
+      - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
+        displayName: 'Create IoC Documentation'
+        inputs:
+          solution: '$(System.DefaultWorkingDirectory)/docfx_project/docfx.json'
 
       - task: PublishPipelineArtifact@1
         inputs:
           artifact: site
           targetPath: $(System.DefaultWorkingDirectory)/docfx_project/_site
 
-                    
+      - task: CopyFiles@2
+        displayName: Copy docs
+        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)/docfx_project/_site
+          Contents: |
+            **
+          TargetFolder: $(Agent.TempDirectory)/xpike.github.io/
+          OverWrite: true
+
+      - script: |
+          git commit -a -m "Updated docs version $(Build.BuildNumber)"
+          git push
+        workingDirectory: $(Agent.TempDirectory)/xpike.github.io/
+                   
