@@ -1,2 +1,6 @@
-- name: TO BE REPLACED
+- name: Introduction
   href: index.md
+- name: xPike Extensions
+  href: extensions/api/index.html 
+- name: Dependency Injection
+  href: ioc/api/index.html 
