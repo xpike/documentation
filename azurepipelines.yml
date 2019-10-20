@@ -1,0 +1,23 @@
+name: $(Date:yyyy.MM.dd).$(Rev:r)
+jobs:
+  - job:
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      - checkout: self
+        persistCredentials: true
+        
+      - script: |
+          git config --global user.email "build@xpike.org"
+          git config --global user.name "Build Agent"
+          git clone https://github.com/xpike/microsoft-extensions.git
+          dir 
+        workingDirectory: $(System.DefaultWorkingDirectory) 
+
+
+      - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
+        displayName: 'Create DocFx Documentation'
+        inputs:
+          solution: '$(System.DefaultWorkingDirectory)/_xpike_microsoft-extensions/docs/docfx.json'
+
+      
