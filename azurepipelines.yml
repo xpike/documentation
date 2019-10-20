@@ -16,14 +16,36 @@ jobs:
         workingDirectory: $(System.DefaultWorkingDirectory) 
 
       - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
-        displayName: 'Create DocFx Documentation'
+        displayName: 'Create Extensions Documentation'
         inputs:
           solution: '$(System.DefaultWorkingDirectory)/microsoft-extensions/docs/docfx.json'
 
       - task: CopyFiles@2
+        displayName: Copy extensions api
         inputs:
           SourceFolder: $(System.DefaultWorkingDirectory)/microsoft-extensions/docs/api
           Contents: |
             **
           TargetFolder: $(System.DefaultWorkingDirectory)/docfx_project/api/extensions/api
           OverWrite: true
+
+      - task: chrismason.vsts-docfxtasks.docfx-extension-build-task.DocFxTask@0
+        displayName: 'Create IoC Documentation'
+        inputs:
+          solution: '$(System.DefaultWorkingDirectory)/microsoft-extensions/docs/docfx.json'
+
+      - task: CopyFiles@2
+        displayName: Copy IoC api
+        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)/ioc/docs/api
+          Contents: |
+            **
+          TargetFolder: $(System.DefaultWorkingDirectory)/docfx_project/api/ioc/api
+          OverWrite: true
+
+      - task: PublishPipelineArtifact@1
+        inputs:
+          artifact: site
+          targetPath: $(System.DefaultWorkingDirectory)/docfx_project/_site
+
+                    
