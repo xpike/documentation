@@ -1,0 +1,64 @@
+### YamlMime:TableOfContent
+- uid: XPike.IoC
+  name: XPike.IoC
+  items:
+  - uid: XPike.IoC.DependencyVerificationException
+    name: DependencyVerificationException
+  - uid: XPike.IoC.IDependencyCollection
+    name: IDependencyCollection
+  - uid: XPike.IoC.IDependencyCollectionExtensions
+    name: IDependencyCollectionExtensions
+  - uid: XPike.IoC.IDependencyPackage
+    name: IDependencyPackage
+  - uid: XPike.IoC.IDependencyProvider
+    name: IDependencyProvider
+- uid: XPike.IoC.Microsoft
+  name: XPike.IoC.Microsoft
+  items:
+  - uid: XPike.IoC.Microsoft.MicrosoftDependencyCollection
+    name: MicrosoftDependencyCollection
+  - uid: XPike.IoC.Microsoft.MicrosoftDependencyProvider
+    name: MicrosoftDependencyProvider
+- uid: XPike.IoC.Microsoft.AspNetCore
+  name: XPike.IoC.Microsoft.AspNetCore
+  items:
+  - uid: XPike.IoC.Microsoft.AspNetCore.IApplicationBuilderExtensions
+    name: IApplicationBuilderExtensions
+  - uid: XPike.IoC.Microsoft.AspNetCore.IServiceCollectionExtensions
+    name: IServiceCollectionExtensions
+- uid: XPike.IoC.Microsoft.WebApi
+  name: XPike.IoC.Microsoft.WebApi
+  items:
+  - uid: XPike.IoC.Microsoft.WebApi.HttpConfigurationExtensions
+    name: HttpConfigurationExtensions
+  - uid: XPike.IoC.Microsoft.WebApi.IDependencyCollectionExtensions
+    name: IDependencyCollectionExtensions
+  - uid: XPike.IoC.Microsoft.WebApi.IDependencyProviderExtensions
+    name: IDependencyProviderExtensions
+- uid: XPike.IoC.Owin
+  name: XPike.IoC.Owin
+  items:
+  - uid: XPike.IoC.Owin.IAppBuilderExtensions
+    name: IAppBuilderExtensions
+  - uid: XPike.IoC.Owin.XPikeDependencyInjectionMiddleware
+    name: XPikeDependencyInjectionMiddleware
+- uid: XPike.IoC.SimpleInjector
+  name: XPike.IoC.SimpleInjector
+  items:
+  - uid: XPike.IoC.SimpleInjector.HttpConfigurationExtensions
+    name: HttpConfigurationExtensions
+  - uid: XPike.IoC.SimpleInjector.IDependencyCollectionExtensions
+    name: IDependencyCollectionExtensions
+  - uid: XPike.IoC.SimpleInjector.IDependencyProviderExtensions
+    name: IDependencyProviderExtensions
+  - uid: XPike.IoC.SimpleInjector.SimpleInjectorDependencyCollection
+    name: SimpleInjectorDependencyCollection
+  - uid: XPike.IoC.SimpleInjector.SimpleInjectorDependencyProvider
+    name: SimpleInjectorDependencyProvider
+- uid: XPike.IoC.SimpleInjector.AspNetCore
+  name: XPike.IoC.SimpleInjector.AspNetCore
+  items:
+  - uid: XPike.IoC.SimpleInjector.AspNetCore.IApplicationBuilderExtensions
+    name: IApplicationBuilderExtensions
+  - uid: XPike.IoC.SimpleInjector.AspNetCore.IServiceCollectionExtensions
+    name: IServiceCollectionExtensions

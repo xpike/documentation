@@ -3,6 +3,6 @@
     "_appFooter": "Copyright &copy; xPike Contributors",
     "_enableSearch": true,
     "_enableNewTab": true,
-    "_disableContribution": true,
+    "_disableContribution": false,
     "_appLogoPath": "images/xpike.png"
 }

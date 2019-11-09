@@ -4,3 +4,7 @@
   href: extensions/api/index.html 
 - name: Dependency Injection
   href: ioc/api/index.html 
+- name: Configuration
+  href: configuration/api/index.html 
+- name: Settings
+  href: Settings/api/index.html 

@@ -42,7 +42,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Step 3
 
-Call the extension method on `IServiceProvider` to add the verify the container:
+Call the extension method on `IServiceProvider` to verify the container:
 
 ```cs
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -52,6 +52,12 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseMvc();
 }
 ```
+
+## When Verification Fails
+
+If the container fails to verify for one or more reasons, a `ServiceProviderVerificationException` is thrown. The
+exception contains a `Results` property, providing an IEnumerable of VerifcationResults that can be inspected for
+details about why the container failed to validate.
 
 ## Performance Considerations
 
