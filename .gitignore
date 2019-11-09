@@ -7,6 +7,8 @@
 /**/bin/
 /**/obj/
 _site
-**/api/**
-!**/api/index.md
-!**/api/toc.yml
+docfx_project/api/**/api/**
+!docfx_project/api/**/index.md
+!docfx_project/api/**/toc.yml
+docfx_project/api/**/api/toc.yml
+docfx_project/api/**/api/index.md
